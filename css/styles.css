@@ -1,1 +1,55 @@
 /* styling the HTML elements */
+
+/* styling the HTML elements */
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Oswald&display=swap');
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    font-family: 'Caveat Brush', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    font-family: 'Caveat Brush', cursive;
+    margin: 0px;
+    padding: 10px 0px;
+    color: rgb(13, 209, 13);
+    background-color: #111;
+    
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li {
+    padding: 0px 20px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 50px;
+    padding: 0px 5px;
+}
+
+.logo span {
+    font-size: 30px;
+    font-weight: bold;
+}
