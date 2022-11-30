@@ -74,11 +74,16 @@ nav ul li {
 
 .container h2 {
     margin: 0;
+    color: #111;
+    font-weight: bold;
+}
+
+.song-item-container {
+    margin-top: 50px;
 }
 
 .song-item {
     height: 50px;
-    width: 80%;
     margin: 10px auto;
     padding: 10px;
     border-radius: 10px;
@@ -93,6 +98,7 @@ nav ul li {
 
 .song-item img{
     height: 50px;
+    border-radius: 100%;
 }
 
 .song-list-play {
@@ -100,6 +106,10 @@ nav ul li {
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+}
+
+.song-item i {
+    cursor: pointer;
 }
 
 
@@ -134,4 +144,20 @@ nav ul li {
 
 #myProgressBar {
     width: 80vw;
+}
+
+.song-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    left: 10vw;
+    top: 10vh;
+}
+
+.song-info img {
+    opacity: 0;
+    transition: 2s ease-in;
+    width: 100px;
 }
