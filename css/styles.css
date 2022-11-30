@@ -1,6 +1,4 @@
 /* styling the HTML elements */
-
-/* styling the HTML elements */
 @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Oswald&display=swap');
 
 h1,
@@ -22,7 +20,8 @@ nav {
     padding: 10px 0px;
     color: rgb(13, 209, 13);
     background-color: #111;
-    
+    position: sticky;
+    top: 0;
 }
 
 nav ul {
@@ -52,4 +51,87 @@ nav ul li {
 .logo span {
     font-size: 30px;
     font-weight: bold;
+}
+
+/* style of the middle container  */
+
+.container {
+    min-height: 60vh;
+    color: white;
+    background-color: rgb(13, 209, 13);
+    display: flex;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    background-image: url(/image/200w.webp), radial-gradient(rgb(13, 209, 13), #111);
+
+    background-position-y: center;
+    background-position-x: right;
+    background-repeat: no-repeat;
+
+}
+
+.container h2 {
+    margin: 0;
+}
+
+.song-item {
+    height: 50px;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #111;
+
+    display: flex;
+    align-items: center;
+    justify-content: 
+    space-between;
+    gap: 10px;
+}
+
+.song-item img{
+    height: 50px;
+}
+
+.song-list-play {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+
+/* style of the bottom container */
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: sticky;
+    bottom: 0;
+    height: 150px;
+    background-color: #111;
+    color: rgb(13, 209, 13);
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+#myProgressBar {
+    width: 80vw;
 }
