@@ -10,6 +10,7 @@ h4 {
 
 body {
     font-family: 'Caveat Brush', cursive;
+    background-image: linear-gradient(to right, black, green);
     margin: 0;
     padding: 0;
 }
