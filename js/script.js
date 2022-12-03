@@ -1,9 +1,10 @@
 // script of spotify
 
 // Initialize the variables
-
-let audioElement = new Audio('songs/4.mp3');
+let songIndex = 0;
+let audioElement = new Audio('songs/1.mp3');
 let masterPlay = document.getElementById('masterPlay');
+let masterSongName = document.getElementById('masterSongName');
 let gif = document.getElementById('gif');
 let myProgressBar = document.getElementById('myProgressBar');
 let songItems = Array.from(document.getElementsByClassName('song-item'));
@@ -41,8 +42,6 @@ masterPlay.addEventListener('click', () => {
         masterPlay.classList.add('fa-play');
         gif.style.opacity = 0;
     }
-
-
 });
 
 // audioElement.play();
@@ -75,19 +74,65 @@ Array.from(document.getElementsByClassName("songItemPlay")).forEach((element) =>
     element.addEventListener('click', (e) => {
         // console.log(e.target);       
         // it gives clicked element or target element
+        console.log(e.target.id);
         
-        index = parseInt(e.target.id) + 1;
+        songIndex = parseInt(e.target.id);
         
         
         
         makeAllPlays();
         e.target.classList.remove("fa-play");
         e.target.classList.add("fa-pause");
-        audioElement.src = 'songs/'+ index + '.mp3';
+        audioElement.src = 'songs/'+ (songIndex+1) + '.mp3';
         audioElement.currentTime = 0;
         audioElement.play();        
         masterPlay.classList.remove('fa-play');
         masterPlay.classList.add('fa-pause');
         gif.style.opacity = 1;
+
+        masterSongName.innerText = songs[songIndex].songName; 
     })
+})
+
+// making the previous button active
+document.getElementById("previous").addEventListener('click', ()=> {
+    if (songIndex <= 0)
+    {
+        songIndex = 4;
+    }
+    else
+    {
+        songIndex -= 1;
+    }
+
+    audioElement.src = 'songs/'+ (songIndex+1) + '.mp3';
+    audioElement.currentTime = 0;
+    audioElement.play();        
+    masterPlay.classList.remove('fa-play');
+    masterPlay.classList.add('fa-pause');
+    gif.style.opacity = 1;
+
+    masterSongName.innerText = songs[songIndex].songName; 
+})
+
+
+// making the next button active
+document.getElementById("next").addEventListener('click', ()=> {
+    if (songIndex >= 4)
+    {
+        songIndex = 0;
+    }
+    else
+    {
+        songIndex += 1;
+    }
+
+    audioElement.src = 'songs/'+ (songIndex+1) + '.mp3';
+    audioElement.currentTime = 0;
+    audioElement.play();        
+    masterPlay.classList.remove('fa-play');
+    masterPlay.classList.add('fa-pause');
+    gif.style.opacity = 1;
+    
+    masterSongName.innerText = songs[songIndex].songName; 
 })
