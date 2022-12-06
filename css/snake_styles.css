@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/image/bg.jpg);
+    background-position: right bottom;
+    background-size: 100vw 100vh;
+}
+
+#board {
+    width: 60vw;
+    height: 40vw;
+    margin-left: 10vw;
+    border: 5px solid #111;
+    border-radius: 10px;
+    background-color: #ccc;
+
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.food {
+    background-color: #111;
+}
