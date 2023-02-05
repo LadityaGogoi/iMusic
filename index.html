@@ -1,74 +1,60 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
-    <title>Beats-/</title>
-    <link rel="stylesheet" href="/beats-4D/css/styles.css">
+    <link rel="stylesheet" href="/iMusic/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>iMusic</title>
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li class="logo"><img src="/beats-4D/image/logo.png"><span>Beats-/</span></li>
-            <li>Home</li>
-            <li>About</li>
-        </ul>
-    </nav>
 
+    <div class="player">
+        <img src="/iMusic/image/cover1.jpg" class="cover"  alt="cover">
+        <h1 class="track-title">Summer</h1>
+        <span class="artist-name">Marshmellow</span>
 
-    <div class="container">
-        <div class="song-list">
-            <h2>Best of all time - No copyright@ songs Provider Lobi@gogoi</h2>
-            <div class="song-item-container">
-                <div class="song-item">
-                    <img src="/beats-4D/image/covers/2.jpg" alt="1">
-                    <span class="songName">Hold on - Justin beiber</span>
-                    <span class="song-list-play">5:34 <i id="0" class="fa-solid fa-play fa-2x songItemPlay"></i></span>
-                </div>
-                <div class="song-item">
-                    <img src="/beats-4D/image/covers/2.jpg" alt="1">
-                    <span class="songName">Hold on - Justin beiber</span>
-                    <span class="song-list-play">5:34 <i id="1" class="fa-solid fa-play fa-2x songItemPlay"></i></span>
-                </div>
-                <div class="song-item">
-                    <img src="/beats-4D/image/covers/2.jpg" alt="1">
-                    <span class="songName">Hold on - Justin beiber</span>
-                    <span class="song-list-play">5:34 <i id="2" class="fa-solid fa-play fa-2x songItemPlay"></i></span>
-                </div>
-                <div class="song-item">
-                    <img src="/beats-4D/image/covers/2.jpg" alt="1">
-                    <span class="songName">Hold on - Justin beiber</span>
-                    <span class="song-list-play">5:34 <i id="3" class="fa-solid fa-play fa-2x songItemPlay"></i></span>
-                </div>
-                <div class="song-item">
-                    <img src="/beats-4D/image/covers/2.jpg" alt="1">
-                    <span class="songName">Hold on - Justin beiber</span>
-                    <span class="song-list-play">5:34 <i id="4" class="fa-solid fa-play fa-2x songItemPlay"></i></span>
-                </div>
+        <div class="timeline-slider">
+            <div class="timeline">
+                <small class="time">0:00</small>
+                <small class="fulltime">2:55</small>
+            </div>
+            <div class="range-slider">
+                <input type="range" min="0" max="100" value="0" class="slider">
+                <div class="slider-thumb"></div>
+                <div class="progress"></div>
             </div>
         </div>
-        <div class="song-banner">
-
+        <div class="volume-slider">
+            <div class="volume-icon">
+                <span class="material-symbols-outlined">
+                    volume_down
+                </span>
+            </div>
+            <div class="range-slider">
+                <input type="range" min="0" max="100" value="50" class="slider">
+                <div class="progress"></div>
+            </div>
+        </div>
+        <div class="controls">
+            <button class="btn" id="btnPrev">
+                <span class="material-symbols-outlined">
+                    fast_rewind
+                </span>
+            </button>
+            <button class="btn btn-main" id="mainPlaybtn">
+                <span class="material-symbols-outlined">
+                    fast_forward
+                </span>
+            </button>
+            <button class="btn" id="btnNext">
+                <span class="material-symbols-outlined">
+                    fast_forward
+                </span>
+            </button>
         </div>
     </div>
 
-
-    <div class="bottom">
-        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
-        <div class="icons">
-            <i class="fa-solid fa-backward fa-3x" id="previous"></i>
-            <i class="fa-solid fa-play fa-3x" id="masterPlay"></i>
-            <i class="fa-solid fa-forward fa-3x" id="next"></i>
-        </div>
-        <div class="song-info">
-            <img src="/beats-4D/image/playing.gif" id="gif" alt="playing-gif">
-            <span id="masterSongName">NCS-1</span>
-        </div>
-    </div>
-
-    <script src="https://kit.fontawesome.com/ca79ff3647.js" crossorigin="anonymous"></script>
-    <script src="/beats-4D/js/script.js"></script>
+    <script src="/iMusic/js/scripts.js"></script>
 </body>
-
 </html>
